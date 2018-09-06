@@ -11,9 +11,7 @@ public class ClaseInterna {
 
 		Robot.DescripcionRobot r = (new Robot(3)).new DescripcionRobot();
 		
-		System.out.println(r);
-
-	 
+ 
 	
 		
 		 
