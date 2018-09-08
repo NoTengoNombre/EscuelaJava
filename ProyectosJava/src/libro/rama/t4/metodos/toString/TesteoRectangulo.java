@@ -40,12 +40,24 @@ public class TesteoRectangulo {
 		} else {
 			System.out.println("•• No son Iguales r1 y r3(equals)");
 		}
-		
+
 		System.out.println(r1.toString());
 		System.out.println(r2.toString());
 		System.out.println(r3.toString());
-		
-		
+
+		Rectangulo r4 = new Rectangulo(30, 40, "Rectangulo r4");
+
+		r4 = (Rectangulo) Rectangulo.deepClone(r3);
+
+		if (r4.equals(r3)) {
+			System.out.println("• Rectangulo r4 = r3; --> Iguales r4 y r3(equals) " + r4.toString());
+			System.out.println("• Rectangulo r4 = r3; --> Iguales r4 y r3(equals) " + r3.toString());
+		} else {
+			System.out.println("• Rectangulo r4 = r3; --> No Iguales r4 y r3(equals) " + r4.toString());
+			System.out.println("• Rectangulo r4 = r3; --> No Iguales r4 y r3(equals) " + r3.toString());
+
+		}
+
 	}
 
 }

@@ -7,28 +7,33 @@
 
 package libro.rama.t4.metodos.toString;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
 /**
  * 
  */
-class Rectangulo implements Cloneable {
+class Rectangulo implements Cloneable, Serializable {
 
 	private int ancho;
 	private int alto;
 	private String nombre;
 
-	
 	public Rectangulo() {
 		ancho = 0;
 		alto = 0;
-		this.nombre = null; 
+		this.nombre = null;
 	}
-	
+
 	/**
 	 * 
 	 * @param an
 	 * @param al
 	 */
-	public Rectangulo(int an, int al , String nombre) {
+	public Rectangulo(int an, int al, String nombre) {
 		ancho = an;
 		alto = al;
 		this.nombre = nombre;
@@ -41,7 +46,7 @@ class Rectangulo implements Cloneable {
 	public int getAncho() {
 		return this.ancho;
 	}
-	
+
 	/**
 	 * 
 	 * @return
@@ -49,15 +54,23 @@ class Rectangulo implements Cloneable {
 	public int getAlto() {
 		return alto;
 	}
-	
+
+	/**
+	 * 
+	 * @param nombre
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
+
+	/**
+	 * 
+	 * @return
+	 */
 	public String getNombre() {
 		return this.nombre;
 	}
-	
+
 	/**
 	 * 
 	 * @return
@@ -66,7 +79,7 @@ class Rectangulo implements Cloneable {
 		ancho++;
 		return this;
 	}
-	
+
 	/**
 	 * 
 	 * @return
@@ -75,7 +88,7 @@ class Rectangulo implements Cloneable {
 		this.alto++;
 		return this;
 	}
-	
+
 	/**
 	 * Clona el objeto
 	 */
@@ -87,6 +100,26 @@ class Rectangulo implements Cloneable {
 			System.out.println("Error al duplicar : " + ex.getCause());
 		}
 		return object;
+	}
+
+	/**
+	 * Funciones static
+	 * 
+	 * @param object
+	 * @return devuelve objeto o 'null'
+	 */
+	public static Object deepClone(Object object) {
+		try {
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			ObjectOutputStream oos = new ObjectOutputStream(baos);
+			oos.writeObject(object);
+			ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
+			ObjectInputStream ois = new ObjectInputStream(bais);
+			return ois.readObject();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 }
