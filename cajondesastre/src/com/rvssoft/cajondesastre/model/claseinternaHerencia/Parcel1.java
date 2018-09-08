@@ -1,5 +1,13 @@
 package com.rvssoft.cajondesastre.model.claseinternaHerencia;
 
+<<<<<<< HEAD
+=======
+/**
+ * 
+ * @author Formacion
+ *
+ */
+>>>>>>> branch 'master' of https://github.com/NoTengoNombre/EscuelaJava
 public class Parcel1 {
 
 	class Contents {
