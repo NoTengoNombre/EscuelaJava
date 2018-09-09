@@ -11,19 +11,15 @@ public class UsoInteger {
 
 	String y;
 
-	public Integer(int i) {
+	public UsoInteger(int i) {
 		y = String.valueOf(i);
 	}
 
 	public static void main(String[] args) {
 
-		Integer i0 = new Integer(1);
-		System.out.println("Crear " + i0);
-		
+		int x = Integer.min(10, 20);
+		System.out.println("Crear : " + x);
 
-		int x = 10;
-		Integer i1 = new Integer(x);
 
-		
 	}
 }
