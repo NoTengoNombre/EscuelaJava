@@ -9,7 +9,7 @@
  * 
  *
  */
-package libro.rama.t4.metodos.porvalorporref;
+package libro.rama.t4.parametros.porvalorporref;
 
 public class TestParam {
 

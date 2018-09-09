@@ -12,17 +12,41 @@ public class Rectangulo {
 	private int ancho;
 	private int alto;
 
+	/**
+	 * 
+	 */
 	public Rectangulo() {
 		ancho = alto = 0;
 	}
 
+	/**
+	 * 
+	 * @param ancho
+	 * @param alto
+	 */
+	public Rectangulo(int ancho, int alto) {
+		this.ancho = ancho;
+		this.alto = alto;
+	}
+
+	/**
+	 * 
+	 * @param dato
+	 */
 	public Rectangulo(int dato) {
 		ancho = alto = dato;
 	}
 
-	public Rectangulo(int ancho, int alto) {
-		this.ancho = ancho;
-		this.alto = alto;
+	/**
+	 * 
+	 * Constructor copia se usa para pasarle los parametros del objeto a otro objeto
+	 * de la misma clase
+	 * 
+	 * @param rectangulo
+	 */
+	public Rectangulo(Rectangulo rectangulo) {
+		this.ancho = rectangulo.getAncho();
+		this.alto = rectangulo.getAlto();
 	}
 
 	public int getAncho() {
