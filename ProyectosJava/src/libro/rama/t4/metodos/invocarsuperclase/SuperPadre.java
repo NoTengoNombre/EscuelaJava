@@ -5,7 +5,7 @@
  *
 */
 
-package libro.rama.t4.metodos.invocarsuper;
+package libro.rama.t4.metodos.invocarsuperclase;
 
 public class SuperPadre {
 

@@ -68,6 +68,7 @@ class Test {
 		Hijo h = new Hijo();
 		h.mostrar();
 		h.getDato();
+		
 
 	}
 }
