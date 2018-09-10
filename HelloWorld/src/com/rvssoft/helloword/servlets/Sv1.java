@@ -12,8 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet({ "/Sv1", "/randomnumber" })
 public class Sv1 extends HttpServlet {
 
-//	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
+/**
+ * Por cada request se habre un hilo d ejecucion	
+ * Para request le llega otro hilo de ejecucion
+ * En paralelo , se dan cuotas de cpu
+ */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -21,10 +26,11 @@ public class Sv1 extends HttpServlet {
 		
 		System.out.println(numero);
 		
+		// se habre otro hilo de ejecucion
 		response.setContentType("text/html");
-		
+		// Escribe la respuesta en el navegador
 		PrintWriter out = response.getWriter();
-		
+		// otro hilo : request
 		out.println("numero aleatorio : " + numero);
 		
 		out.close();

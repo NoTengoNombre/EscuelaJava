@@ -9,13 +9,33 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+/**
+ * Siempre habra una instancia del Singleton
+ * 
+ *
+ */
 @WebServlet("/frase")
 public class Sv2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * Variable de instancia de Servlets 
+	 * Solo tendra una unica instancia 
+	 * 
+	 * Si el Servlets no fuera un Singleton - se inyectaria un Singleton
+	 */
+	
+	/**
+	 * private static GeneradorFrase generadorFrases = new GeneradorFrase();
+	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		//Aqui NO ! Instanciamos un objeto para cada request
+		// GeneradorFrase generador
+		
 		String mensaje = request.getParameter("n");
 
 		response.setContentType("text/html");
@@ -67,3 +87,17 @@ public class Sv2 extends HttpServlet {
 	}
 
 }
+
+
+//  
+//  String strNumero = request.getParameter("n");
+//  char ultimaCifra = strNumero.charAt(strNumero.length()-1);
+// 
+//  System.out.println("Cifra : " + ultimaCifra);
+//  
+//  response.setContentType("text/html");
+//  
+//  PrintWrite out = response.getWriter();
+// 
+//  out.println(GeneradorFrase.getFrase(ultimaCifra);
+//  out.clase();
