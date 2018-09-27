@@ -1,10 +1,5 @@
 package com.rvssoft.cajondesastre.model.claseinternaHerencia;
 
-/**
- * 
- * @author Formacion
- *
- */
 public class Parcel1 {
 
 	class Contents {
