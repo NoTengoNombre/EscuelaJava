@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ajax Countries</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/restcountries.js">
+        </script>
+    </head>
+    <body>
+        <h1>Ejemplo Ajax</h1>
+
+        <!-- Africa , Americas , Asia , Europe , Oceania -->
+        <h2>Listado de paises por continente</h2>
+        
+        <select onchange="solicitarPaises(this.value)">
+            <option value="Africa">Africa</option>
+            <option value="Americas">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+        </select>
+
+        <div id="idPaisesPorContinente">
+            
+        </div>
+
+
+    </body>
+</html>

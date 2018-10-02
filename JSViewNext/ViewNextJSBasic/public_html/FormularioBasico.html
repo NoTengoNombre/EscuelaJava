@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>VALIDAR DNI</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/FormularioBasico.js"></script>
+    </head>
+    <body>
+        <h1>Formulario Basico</h1>
+
+        <section>
+            <h2>Introduce los siguientes datos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>DNI</th>
+                        <th>Tratamiento</th>
+                        <th>Nombre</th>
+                        <th>Fecha</th>
+                        <th>Importe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input id="idDNI" type="text" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select>
+                                <option value="idTratamiento">Don</option>
+                                <option value="idTratamiento">Doña</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="idNombre" type="text" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="idFecha" type="date" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="idImporte" type="number" value="">
+                        </td>
+                    </tr>
+                </tbody>
+
+
+
+
+
+                <label>Tratamiento</label>
+
+                <br>
+                <label>Nombre</label>
+                <input id="idNombre" type="text" value="">
+                <br>
+                <label>Fecha</label>
+                <input id="idFecha" type="date" value="">
+                <br>
+                <label>Importe</label>
+                <input id="idImporte" type="number" value="">
+
+            </table>
+        </section>
+
+        <hr>
+
+        <div>
+            <input type="button" value="Enviar" onclick="datos()">
+        </div>
+
+
+        <div>
+            <p id="obtenerDatos"></p>
+        </div>
+
+    </body>
+</html>

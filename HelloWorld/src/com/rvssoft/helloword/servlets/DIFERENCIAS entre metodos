@@ -1,0 +1,10 @@
+HttpServletRequest request
+
+//objeto.metodo
+request.getParameter(String): String
+
+NO SON LO MISMO !!!! ENTENDER LA DIFERENCIA !!!!! 
+
+request.getAttribute(String): Object
+
+
