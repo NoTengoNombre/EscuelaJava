@@ -10,12 +10,12 @@ package claseabstracta;
  * @author Formacion
  */
 public class ClaseAbstracta {
-
  /**
   * @param args the command line arguments
   */
  public static void main(String[] args) {
   // TODO code application logic here
+  System.out.println("");
  }
  
 }
