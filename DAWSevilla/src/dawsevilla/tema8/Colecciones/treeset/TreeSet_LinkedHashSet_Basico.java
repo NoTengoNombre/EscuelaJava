@@ -46,7 +46,7 @@ public class TreeSet_LinkedHashSet_Basico {
   ts.forEach((i) -> {
    if (i >= 1) {
     System.out.println("Valor : " + ++i);
-   }else{
+   } else {
     System.out.println("Ningun Valor : " + ++i);
    }
   });
