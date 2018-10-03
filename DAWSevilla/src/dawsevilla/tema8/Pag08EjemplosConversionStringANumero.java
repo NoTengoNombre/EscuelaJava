@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @version 1.0
  * @author Raul Vela Salas
  */
-public class Pag8EjemplosConversionStringANumero {
+public class Pag08EjemplosConversionStringANumero {
 
  /**
   * Atributo de instancia
@@ -22,14 +22,14 @@ public class Pag8EjemplosConversionStringANumero {
  /**
   * Constructor basico
   */
- public Pag8EjemplosConversionStringANumero() {
+ public Pag08EjemplosConversionStringANumero() {
  }
 
  /**
   *
   * @param operacionCancelada
   */
- public Pag8EjemplosConversionStringANumero(boolean operacionCancelada) {
+ public Pag08EjemplosConversionStringANumero(boolean operacionCancelada) {
   this.operacionCancelada = operacionCancelada;
  }
 
@@ -203,26 +203,21 @@ public class Pag8EjemplosConversionStringANumero {
 
  public static void main(String[] args) {
 
-  Double d = new Pag8EjemplosConversionStringANumero().PedirNumeroDouble("Lanzar", "Introduce un numero Double ");
+  Double d = new Pag08EjemplosConversionStringANumero().PedirNumeroDouble("Lanzar", "Introduce un numero Double ");
   JOptionPane.showMessageDialog(null, "El numero Introducido es : " + d.toString(), "Valor obtenido", JOptionPane.INFORMATION_MESSAGE);
-  
-  
 
-  Float f = new Pag8EjemplosConversionStringANumero().PedirNumeroFloat("Lanzar", "Introduce un numero Float ");
+  Float f = new Pag08EjemplosConversionStringANumero().PedirNumeroFloat("Lanzar", "Introduce un numero Float ");
   JOptionPane.showMessageDialog(null, "El numero Introducido es : " + f.toString(), "Valor obtenido", JOptionPane.INFORMATION_MESSAGE);
 
-  Integer i = new Pag8EjemplosConversionStringANumero().PedirNumeroInteger("Lanzar", "Introduce un numero Integer ");
+  Integer i = new Pag08EjemplosConversionStringANumero().PedirNumeroInteger("Lanzar", "Introduce un numero Integer ");
   JOptionPane.showMessageDialog(null, "El numero Introducido es : " + i.toString(), "Valor obtenido", JOptionPane.INFORMATION_MESSAGE);
 
-  Long l = new Pag8EjemplosConversionStringANumero().PedirNumeroLong("Lanzar", "Introduce un numero Long ");
+  Long l = new Pag08EjemplosConversionStringANumero().PedirNumeroLong("Lanzar", "Introduce un numero Long ");
   JOptionPane.showMessageDialog(null, "El numero Introducido es : " + l.toString(), "Valor obtenido", JOptionPane.INFORMATION_MESSAGE);
 
-  Short s = new Pag8EjemplosConversionStringANumero().PedirNumeroShort("Lanzar", "Introduce un numero Short ");
+  Short s = new Pag08EjemplosConversionStringANumero().PedirNumeroShort("Lanzar", "Introduce un numero Short ");
   JOptionPane.showMessageDialog(null, "El numero Introducido es : " + s.toString(), "Valor obtenido", JOptionPane.INFORMATION_MESSAGE);
 
-  
-  
-  
  }
 
 }
