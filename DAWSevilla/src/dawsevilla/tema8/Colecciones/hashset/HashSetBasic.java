@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dawsevilla.tema8.Colecciones;
+package dawsevilla.tema8.Colecciones.hashset;
 
 import java.util.HashSet;
 
