@@ -25,20 +25,20 @@ import java.util.regex.Pattern;
  * @version 1.0
  * @author Raul Vela Salas
  */
-class Articulo {
+class Articulo2 implements Comparable<Articulo2> {
 
  private String codArticulo;
  private String descripcion;
  private int cantidad;
  private int cod;
 
- public Articulo() {
+ public Articulo2() {
   this.codArticulo = null;
   this.descripcion = null;
   this.cantidad = 0;
  }
 
- public Articulo(String codArticulo, String descripcion, int cantidad) {
+ public Articulo2(String codArticulo, String descripcion, int cantidad) {
   this.codArticulo = codArticulo;
   this.descripcion = descripcion;
   this.cantidad = cantidad;
@@ -75,13 +75,23 @@ class Articulo {
  public String getDescripcion() {
   return descripcion;
  }
+
+ /**
+  *
+  * @param o - objeto de la clase Articulo2s
+  * @return
+  */
+ @Override
+ public int compareTo(Articulo2 o) {
+  return getCodArticulo().compareTo(o.codArticulo);
+ }
 }
 
 /**
  *
  * @author Formacion
  */
-public class ProcesarArchivo2 {
+public class ProcesarArchivo21 {
 
  private static final Scanner ENTRADA = new Scanner(System.in);
 
@@ -93,7 +103,7 @@ public class ProcesarArchivo2 {
   // Obtener buffer de datos
   BufferedReader lector;
   // Crear una lista para almacenar los Articulo
-  List<Articulo> Articulos = new ArrayList<>();
+  List<Articulo2> Articulos = new ArrayList<>();
   // Creamos un HashMap para almacenar los valores por clave valor
   Map<String, String> DatosPedido = new HashMap<>();
 // Recogemos los parametros recibidos desde la consola
@@ -158,7 +168,7 @@ public class ProcesarArchivo2 {
   * @return si la linea contiene info que corresponde al formato esperado ,
   * false en caso contrario
   */
- private static boolean procesarLinea(String linea, Map<String, String> datosPedido, List<Articulo> articulos) {
+ private static boolean procesarLinea(String linea, Map<String, String> datosPedido, List<Articulo2> articulos) {
   //Patrones para filtrar los datos
   Matcher deteccionSeccion = SECCION.matcher(linea);
   Matcher deteccionCampo = CAMPO.matcher(linea);
@@ -168,14 +178,12 @@ public class ProcesarArchivo2 {
 //        metera tanto el campo como el valor del mapa
   if (deteccionSeccion.matches()) {
    return true;
-   /**
-    * Sino
-    */
+// Sino
   } else if (deteccionCampo.matches()) {
    datosPedido.put(deteccionCampo.group(1).trim().toLowerCase(), deteccionCampo.group(2).trim());
    return true;
   } else if (deteccionArticulo.matches()) {
-   Articulo datosArticulo = new Articulo();
+   Articulo2 datosArticulo = new Articulo2();
    datosArticulo.setCodArticulo(deteccionArticulo.group(1).trim());
    datosArticulo.setDescripcion(deteccionArticulo.group(2).trim());
    datosArticulo.setCantidad(Integer.parseInt(deteccionArticulo.group(3)));
@@ -203,7 +211,7 @@ public class ProcesarArchivo2 {
    FileReader f = new FileReader(nombreArchivo);
    reader = new BufferedReader(f);
   } catch (FileNotFoundException ex) {
-   Logger.getLogger(ProcesarArchivo2.class.getName()).log(Level.SEVERE, null, ex);
+   Logger.getLogger(ProcesarArchivo21.class.getName()).log(Level.SEVERE, null, ex);
   }
   return reader;
  }
